@@ -109,7 +109,7 @@ class Users extends Component {
                     className='form-control'
                   />
                   <br />
-                  <button className='btn btn-dark btn-block'>Add User</button>
+                  <button className='btn btn-info btn-block'>Add User</button>
                 </div>
               </form>
             </ModalBody>
@@ -200,7 +200,7 @@ class Users extends Component {
                     className='form-control'
                   />
                   <br />
-                  <button className='btn btn-dark btn-block'>
+                  <button className='btn btn-info btn-block'>
                     Update User
                   </button>
                 </div>
@@ -266,7 +266,7 @@ class Users extends Component {
             <ModalBody>
               <p className='error'>Are you sure?</p>{' '}
               <form onSubmit={this.onSubmitDeleteUser}>
-                <button className='btn btn-dark btn-block'>Delete User</button>
+                <button className='btn btn-info btn-block'>Delete User</button>
               </form>
             </ModalBody>
           </Modal>
@@ -303,7 +303,7 @@ class Users extends Component {
         <p className='success'>{this.state.success}</p>{' '}
         <div className='container'>
           <button
-            className='btn btn-primary'
+            className='btn btn-info'
             onClick={this.onAddClick}
             id='add-user-button'
           >
@@ -312,7 +312,7 @@ class Users extends Component {
           <br />
           <br />
           <table className='table table-bordered table-striped'>
-            <thead className='thead-dark'>
+            <thead className='bg-info text-light'>
               <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -328,7 +328,7 @@ class Users extends Component {
                   <td>{user.role}</td>
                   <td>
                     <button
-                      className='btn btn-warning btn-sm'
+                      className='btn btn-info btn-sm'
                       onClick={() =>
                         this.onUpdateClick(user._id, user.name, user.role)
                       }
@@ -337,7 +337,7 @@ class Users extends Component {
                     </button>
                     &nbsp;
                     <button
-                      className='btn btn-danger btn-sm'
+                      className='btn btn-info btn-sm'
                       onClick={() => this.onDeleteClick(user._id)}
                     >
                       Delete
