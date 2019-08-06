@@ -241,13 +241,13 @@ class Users extends Component {
   // *** DELETE USER ***
 
   // call deleteUser dispatch
-  onDeleteClick = id => {
+  onDeleteClick = (id, name) => {
     this.setState({
       updateModal: false,
       addModal: false,
       deleteModal: true,
       id: id,
-      // name: name,
+      name: name,
       // role: role,
       success: ''
     });
@@ -261,7 +261,9 @@ class Users extends Component {
           <Modal isOpen={this.state.deleteModal}>
             {/* <Modal isOpen='true'> */}
             <ModalHeader toggle={this.deleteToggle}>
-              Delet - {this.state.id}
+              ID: {this.state.id}
+              <br />
+              Name: {this.state.name}
             </ModalHeader>
             <ModalBody>
               <p className='error'>Are you sure?</p>{' '}
@@ -338,7 +340,7 @@ class Users extends Component {
                     &nbsp;
                     <button
                       className='btn btn-info btn-sm'
-                      onClick={() => this.onDeleteClick(user._id)}
+                      onClick={() => this.onDeleteClick(user._id, user.name)}
                     >
                       Delete
                     </button>
