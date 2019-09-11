@@ -40,7 +40,7 @@ class Navigation extends Component {
             <NavbarToggler onClick={this.toggleBurgerMenu} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className='ml-auto' navbar>
-                <NavItem>
+                {/* <NavItem>
                   <Link
                     className='nav-link'
                     onClick={e => {
@@ -50,7 +50,7 @@ class Navigation extends Component {
                   >
                     Github
                   </Link>
-                </NavItem>
+                </NavItem> */}
                 <NavItem>
                   <Link
                     className='nav-link'
