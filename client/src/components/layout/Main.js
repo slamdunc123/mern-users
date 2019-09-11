@@ -9,7 +9,6 @@ import Users from '../views/Users';
 const Main = () => {
   return (
     <div>
-      Main
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/users' component={Users} />
