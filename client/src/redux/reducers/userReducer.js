@@ -46,7 +46,7 @@ export default function(state = initialState, action) {
         } else return state;
       });
 
-    //   break;
+      // break;
 
     case USERS_LOADING:
       return {
